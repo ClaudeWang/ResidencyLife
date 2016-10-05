@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0B34A7FE1D753997003CF676"
-               BuildableName = "SurveyApp.app"
-               BlueprintName = "SurveyApp"
-               ReferencedContainer = "container:SurveyApp.xcodeproj">
+               BuildableName = "ResidencyLife.app"
+               BlueprintName = "ResidencyLife"
+               ReferencedContainer = "container:ResidencyLife.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0B34A8121D753998003CF676"
-               BuildableName = "SurveyAppTests.xctest"
-               BlueprintName = "SurveyAppTests"
-               ReferencedContainer = "container:SurveyApp.xcodeproj">
+               BuildableName = "ResidencyLifeTests.xctest"
+               BlueprintName = "ResidencyLifeTests"
+               ReferencedContainer = "container:ResidencyLife.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0B34A81D1D753998003CF676"
-               BuildableName = "SurveyAppUITests.xctest"
-               BlueprintName = "SurveyAppUITests"
-               ReferencedContainer = "container:SurveyApp.xcodeproj">
+               BuildableName = "ResidencyLifeTests.xctest"
+               BlueprintName = "ResidencyLifeUITests"
+               ReferencedContainer = "container:ResidencyLife.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0B34A7FE1D753997003CF676"
-            BuildableName = "SurveyApp.app"
-            BlueprintName = "SurveyApp"
-            ReferencedContainer = "container:SurveyApp.xcodeproj">
+            BuildableName = "ResidencyLife.app"
+            BlueprintName = "ResidencyLife"
+            ReferencedContainer = "container:ResidencyLife.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0B34A7FE1D753997003CF676"
-            BuildableName = "SurveyApp.app"
-            BlueprintName = "SurveyApp"
-            ReferencedContainer = "container:SurveyApp.xcodeproj">
+            BuildableName = "ResidencyLife.app"
+            BlueprintName = "ResidencyLife"
+            ReferencedContainer = "container:ResidencyLife.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0B34A7FE1D753997003CF676"
-            BuildableName = "SurveyApp.app"
-            BlueprintName = "SurveyApp"
-            ReferencedContainer = "container:SurveyApp.xcodeproj">
+            BuildableName = "ResidencyLife.app"
+            BlueprintName = "ResidencyLife"
+            ReferencedContainer = "container:ResidencyLife.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -46,17 +46,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B34A7FF1D753997003CF676 /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B34A7FF1D753997003CF676 /* ResidencyLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResidencyLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B34A8021D753997003CF676 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B34A8041D753997003CF676 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0B34A8071D753998003CF676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B34A8091D753998003CF676 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B34A80C1D753998003CF676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B34A80E1D753998003CF676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0B34A8131D753998003CF676 /* SurveyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B34A8131D753998003CF676 /* ResidencyLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResidencyLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B34A8171D753998003CF676 /* SurveyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppTests.swift; sourceTree = "<group>"; };
 		0B34A8191D753998003CF676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0B34A81E1D753998003CF676 /* SurveyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B34A81E1D753998003CF676 /* ResidencyLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResidencyLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B34A8221D753998003CF676 /* SurveyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppUITests.swift; sourceTree = "<group>"; };
 		0B34A8241D753998003CF676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B34A8321D753CA2003CF676 /* SurveyAppPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyAppPageViewController.swift; sourceTree = "<group>"; };
@@ -115,9 +115,9 @@
 		0B34A8001D753997003CF676 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B34A7FF1D753997003CF676 /* SurveyApp.app */,
-				0B34A8131D753998003CF676 /* SurveyAppTests.xctest */,
-				0B34A81E1D753998003CF676 /* SurveyAppUITests.xctest */,
+				0B34A7FF1D753997003CF676 /* ResidencyLife.app */,
+				0B34A8131D753998003CF676 /* ResidencyLifeTests.xctest */,
+				0B34A81E1D753998003CF676 /* ResidencyLifeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,9 +168,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0B34A7FE1D753997003CF676 /* SurveyApp */ = {
+		0B34A7FE1D753997003CF676 /* ResidencyLife */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0B34A8271D753998003CF676 /* Build configuration list for PBXNativeTarget "SurveyApp" */;
+			buildConfigurationList = 0B34A8271D753998003CF676 /* Build configuration list for PBXNativeTarget "ResidencyLife" */;
 			buildPhases = (
 				0B34A7FB1D753997003CF676 /* Sources */,
 				0B34A7FC1D753997003CF676 /* Frameworks */,
@@ -180,14 +180,14 @@
 			);
 			dependencies = (
 			);
-			name = SurveyApp;
+			name = ResidencyLife;
 			productName = SurveyApp;
-			productReference = 0B34A7FF1D753997003CF676 /* SurveyApp.app */;
+			productReference = 0B34A7FF1D753997003CF676 /* ResidencyLife.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0B34A8121D753998003CF676 /* SurveyAppTests */ = {
+		0B34A8121D753998003CF676 /* ResidencyLifeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0B34A82A1D753998003CF676 /* Build configuration list for PBXNativeTarget "SurveyAppTests" */;
+			buildConfigurationList = 0B34A82A1D753998003CF676 /* Build configuration list for PBXNativeTarget "ResidencyLifeTests" */;
 			buildPhases = (
 				0B34A80F1D753998003CF676 /* Sources */,
 				0B34A8101D753998003CF676 /* Frameworks */,
@@ -198,14 +198,14 @@
 			dependencies = (
 				0B34A8151D753998003CF676 /* PBXTargetDependency */,
 			);
-			name = SurveyAppTests;
+			name = ResidencyLifeTests;
 			productName = SurveyAppTests;
-			productReference = 0B34A8131D753998003CF676 /* SurveyAppTests.xctest */;
+			productReference = 0B34A8131D753998003CF676 /* ResidencyLifeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0B34A81D1D753998003CF676 /* SurveyAppUITests */ = {
+		0B34A81D1D753998003CF676 /* ResidencyLifeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0B34A82D1D753998003CF676 /* Build configuration list for PBXNativeTarget "SurveyAppUITests" */;
+			buildConfigurationList = 0B34A82D1D753998003CF676 /* Build configuration list for PBXNativeTarget "ResidencyLifeUITests" */;
 			buildPhases = (
 				0B34A81A1D753998003CF676 /* Sources */,
 				0B34A81B1D753998003CF676 /* Frameworks */,
@@ -216,9 +216,9 @@
 			dependencies = (
 				0B34A8201D753998003CF676 /* PBXTargetDependency */,
 			);
-			name = SurveyAppUITests;
+			name = ResidencyLifeUITests;
 			productName = SurveyAppUITests;
-			productReference = 0B34A81E1D753998003CF676 /* SurveyAppUITests.xctest */;
+			productReference = 0B34A81E1D753998003CF676 /* ResidencyLifeTests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -245,7 +245,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0B34A7FA1D753997003CF676 /* Build configuration list for PBXProject "SurveyApp" */;
+			buildConfigurationList = 0B34A7FA1D753997003CF676 /* Build configuration list for PBXProject "ResidencyLife" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -258,9 +258,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0B34A7FE1D753997003CF676 /* SurveyApp */,
-				0B34A8121D753998003CF676 /* SurveyAppTests */,
-				0B34A81D1D753998003CF676 /* SurveyAppUITests */,
+				0B34A7FE1D753997003CF676 /* ResidencyLife */,
+				0B34A8121D753998003CF676 /* ResidencyLifeTests */,
+				0B34A81D1D753998003CF676 /* ResidencyLifeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -333,12 +333,12 @@
 /* Begin PBXTargetDependency section */
 		0B34A8151D753998003CF676 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0B34A7FE1D753997003CF676 /* SurveyApp */;
+			target = 0B34A7FE1D753997003CF676 /* ResidencyLife */;
 			targetProxy = 0B34A8141D753998003CF676 /* PBXContainerItemProxy */;
 		};
 		0B34A8201D753998003CF676 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0B34A7FE1D753997003CF676 /* SurveyApp */;
+			target = 0B34A7FE1D753997003CF676 /* ResidencyLife */;
 			targetProxy = 0B34A81F1D753998003CF676 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -459,7 +459,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.rice.ScalableHealth.Claude.SurveyApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ResidencyLife;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SurveyApp/SurveyApp-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -481,7 +481,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.rice.ScalableHealth.Claude.SurveyApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ResidencyLife;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "SurveyApp/SurveyApp-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -495,8 +495,8 @@
 				INFOPLIST_FILE = SurveyAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.rice.ScalableHealth.Claude.SurveyAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SurveyApp.app/SurveyApp";
+				PRODUCT_NAME = ResidencyLifeTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ResidencyLife.app/ResidencyLife";
 			};
 			name = Debug;
 		};
@@ -507,8 +507,8 @@
 				INFOPLIST_FILE = SurveyAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.rice.ScalableHealth.Claude.SurveyAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SurveyApp.app/SurveyApp";
+				PRODUCT_NAME = ResidencyLifeTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ResidencyLife.app/ResidencyLife";
 			};
 			name = Release;
 		};
@@ -518,7 +518,7 @@
 				INFOPLIST_FILE = SurveyAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.rice.ScalableHealth.Claude.SurveyAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ResidencyLifeTests;
 				TEST_TARGET_NAME = SurveyApp;
 				USES_XCTRUNNER = YES;
 			};
@@ -530,7 +530,7 @@
 				INFOPLIST_FILE = SurveyAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.rice.ScalableHealth.Claude.SurveyAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ResidencyLifeTests;
 				TEST_TARGET_NAME = SurveyApp;
 				USES_XCTRUNNER = YES;
 			};
@@ -539,7 +539,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0B34A7FA1D753997003CF676 /* Build configuration list for PBXProject "SurveyApp" */ = {
+		0B34A7FA1D753997003CF676 /* Build configuration list for PBXProject "ResidencyLife" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B34A8251D753998003CF676 /* Debug */,
@@ -548,7 +548,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0B34A8271D753998003CF676 /* Build configuration list for PBXNativeTarget "SurveyApp" */ = {
+		0B34A8271D753998003CF676 /* Build configuration list for PBXNativeTarget "ResidencyLife" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B34A8281D753998003CF676 /* Debug */,
@@ -557,7 +557,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0B34A82A1D753998003CF676 /* Build configuration list for PBXNativeTarget "SurveyAppTests" */ = {
+		0B34A82A1D753998003CF676 /* Build configuration list for PBXNativeTarget "ResidencyLifeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B34A82B1D753998003CF676 /* Debug */,
@@ -566,7 +566,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0B34A82D1D753998003CF676 /* Build configuration list for PBXNativeTarget "SurveyAppUITests" */ = {
+		0B34A82D1D753998003CF676 /* Build configuration list for PBXNativeTarget "ResidencyLifeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B34A82E1D753998003CF676 /* Debug */,
