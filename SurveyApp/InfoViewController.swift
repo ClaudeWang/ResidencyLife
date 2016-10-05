@@ -13,13 +13,12 @@ class InfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet var genderPicker: UIPickerView!
     @IBOutlet var maritalPicker: UIPickerView!
     @IBOutlet var childrenPicker: UIPickerView!
-    @IBOutlet var pg4Picker: UIPickerView!
     
+    @IBOutlet var pg4: UITextField!
     @IBOutlet var age: UITextField!
     var pickerDataGender = ["----", "Male", "Female"]
     var pickerDataMarital = ["----", "Single", "Married", "Separated", "Divorced", "Widowed"]
     var pickerDataChildren = ["0", "1", "2-3", "3+"]
-    var pickerDataPG4 = ["1", "2", "3", "4"]
     override func viewDidLoad() {
         super.viewDidLoad()
         //add done button to keyboard
@@ -28,12 +27,17 @@ class InfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         let barBtnDone = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Done, target: self, action: "dismissKeyboard")
         toolbarDone.items = [barBtnDone]
         age.inputAccessoryView = toolbarDone
+        pg4.inputAccessoryView = toolbarDone
         
         
         age.keyboardType = UIKeyboardType.NumberPad
+        pg4.keyboardType = UIKeyboardType.NumberPad
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
-        // Do any additional setup after loading the view.
+        // set picker to point to the middle.
+        genderPicker.selectRow(1, inComponent: 0, animated: false)
+        maritalPicker.selectRow(1, inComponent: 0, animated: false)
+        childrenPicker.selectRow(1, inComponent: 0, animated: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,7 +50,7 @@ class InfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         //check basic validity
         //age
 
-        if (!checkAge()) {
+        if (!checkAgeAndPG4()) {
             return
         }
         
@@ -56,13 +60,13 @@ class InfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         let gender = pickerDataGender[genderPicker.selectedRowInComponent(0)]
         let marital = pickerDataMarital[maritalPicker.selectedRowInComponent(0)]
         let children = pickerDataChildren[childrenPicker.selectedRowInComponent(0)]
-        let pg4 = pickerDataPG4[pg4Picker.selectedRowInComponent(0)]
+        let pg4Value = Int(pg4.text!)!
         
         
         let timestamp = NSDate().timeIntervalSince1970
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let client = delegate.client!
-        let item = ["age": age_val, "email": email_val, "PG4": pg4, "gender": gender, "children": children, "marital": marital, "timestamp": String(timestamp)]
+        let item = ["age": age_val, "email": email_val, "PG4": pg4Value, "gender": gender, "children": children, "marital": marital, "timestamp": String(timestamp)]
         let itemTable = client.tableWithName("DemographicsItem")
         itemTable.insert(item as [NSObject : AnyObject]) {
             (insertedItem, error) in
@@ -82,20 +86,30 @@ class InfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         self.presentViewController(alert, animated: true, completion: nil)
     }
 
-    func checkAge() -> Bool{
+    func checkAgeAndPG4() -> Bool{
         if (age.text == "") {
             fireAlert("Age cannot be empty")
             return false
         }
+        if (pg4.text == "") {
+            fireAlert("PG4 cannot be empty")
+        }
+        //check age to be a number and greater than 18.
         if let age = Int(age.text!) {
             if (age < 18) {
                 fireAlert("You have to be over 18 to use the app")
                 return false
             }
-        }else {
+        } else {
             fireAlert("Please enter valid age")
             return false
         }
+        //check pg4 level is a number.
+        if ((Int(pg4.text!)) == nil) {
+            fireAlert("Please enter the correct PG4 level")
+            return false
+        }
+
         return true
     }
     
@@ -110,10 +124,8 @@ class InfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             return pickerDataGender[row]
         }else if (pickerView.tag == 1) {
             return pickerDataMarital[row]
-        }else if (pickerView.tag == 2){
-            return pickerDataChildren[row]
         }else {
-            return pickerDataPG4[row]
+            return pickerDataChildren[row]
         }
     }
     
@@ -122,12 +134,11 @@ class InfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             return pickerDataGender.count
         }else if (pickerView.tag == 1) {
             return pickerDataMarital.count
-        }else if (pickerView.tag == 2){
-            return pickerDataChildren.count
         }else {
-            return pickerDataPG4.count
+            return pickerDataChildren.count
         }
     }
+    
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)

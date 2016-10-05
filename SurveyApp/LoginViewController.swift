@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
         if (hashCheck(emailTextField.text!)){
             //perform segue and store the hash to local.
             let defaults = NSUserDefaults.standardUserDefaults()
-            defaults.setValue("zw21@rice.edu", forKey: "ID")
+            defaults.setValue(emailTextField.text, forKey: "ID")
             defaults.synchronize()
             self.performSegueWithIdentifier("loginToInfo", sender: self)
         }
