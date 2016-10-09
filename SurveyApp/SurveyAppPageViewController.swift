@@ -9,7 +9,12 @@
 import UIKit
 
 
-class SurveyAppPageViewController: UIPageViewController, UIPageViewControllerDataSource {
+class SurveyAppPageViewController: UIPageViewController {
+
+    
+    
+    //delegate for the page control.
+    weak var controlDelegate: SurveyAppPageControlleDelegate?
     
     override init(transitionStyle style: UIPageViewControllerTransitionStyle, navigationOrientation: UIPageViewControllerNavigationOrientation, options: [String : AnyObject]?) {
         super.init(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: options)
@@ -23,8 +28,12 @@ class SurveyAppPageViewController: UIPageViewController, UIPageViewControllerDat
         let resultPage = UIStoryboard(name: "Main", bundle: nil) .
             instantiateViewControllerWithIdentifier("ResultPageViewController") as! ResultPageViewController
         resultPage.setParentController(self)
-        return [self.newIndexViewController("Second"),
-            self.newIndexViewController("First"),
+        let firstPage = self.newIndexViewController("First") as! FirstQuestionPageController
+        firstPage.setParentController(self)
+        let secondPage = self.newIndexViewController("Second") as! SecondQuestionPageController
+        secondPage.setParentController(self)
+        return [secondPage,
+            firstPage,
 //            self.newIndexViewController("Third"),
             resultPage
             
@@ -38,12 +47,14 @@ class SurveyAppPageViewController: UIPageViewController, UIPageViewControllerDat
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
+        self.delegate = self
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
                 direction: .Forward,
                 animated: true,
                 completion: nil)
         }
+        controlDelegate?.surveyAppPageViewController(self, didUpdatePageCount: orderedViewControllers.count)
     }
     internal func collectResponse()->[String: String] {
         let email = NSUserDefaults.standardUserDefaults().stringForKey("ID")
@@ -93,6 +104,26 @@ class SurveyAppPageViewController: UIPageViewController, UIPageViewControllerDat
         }
     }
     
+    func goNextPage(_:AnyObject) {
+        let cur = self.viewControllers![0]
+        let p = self.pageViewController(self, viewControllerAfterViewController: cur)
+        self.setViewControllers([p!], direction: .Forward, animated: true, completion: nil)
+        let viewControllerIndex = orderedViewControllers.indexOf(p!)
+        controlDelegate?.surveyAppPageViewController(self, didUpdatePageIndex: viewControllerIndex!)
+        //print(viewControllerIndex)
+        
+    }
+    func goPrevPage(_:AnyObject) {
+        let cur = self.viewControllers![0]
+        let p = self.pageViewController(self, viewControllerBeforeViewController: cur)
+        self.setViewControllers([p!], direction: .Reverse, animated: true, completion: nil)
+        let viewControllerIndex = orderedViewControllers.indexOf(p!)
+        controlDelegate?.surveyAppPageViewController(self, didUpdatePageIndex: viewControllerIndex!)
+    }
+    
+}
+
+extension SurveyAppPageViewController: UIPageViewControllerDataSource {
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {return nil}
         
@@ -111,51 +142,40 @@ class SurveyAppPageViewController: UIPageViewController, UIPageViewControllerDat
         guard orderedViewControllers.count > previousIndex else {return nil}
         return orderedViewControllers[previousIndex];
     }
-    
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        print("called")
         return orderedViewControllers.count
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
         guard let firstViewController = viewControllers?.first,
-        firstViewControllerIndex = orderedViewControllers.indexOf(firstViewController) else {
-            return 0
+            firstViewControllerIndex = orderedViewControllers.indexOf(firstViewController) else {
+                return 0
         }
+        
         return firstViewControllerIndex
     }
 }
 
-//extension SurveyAppPageViewController: UIPageViewControllerDataSource {
-//    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-//        guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {return nil}
-//        
-//        let nextIndex = viewControllerIndex + 1
-//        let orderedViewControllersCount = orderedViewControllers.count
-//        
-//        guard orderedViewControllersCount != nextIndex else {return nil}
-//        guard orderedViewControllersCount > nextIndex else {return nil}
-//        return orderedViewControllers[nextIndex]
-//    }
-//    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-//        //return nil if a check does no pass.
-//        guard let viewControllerIndex = orderedViewControllers.indexOf(viewController) else {return nil}
-//        let previousIndex = viewControllerIndex - 1;
-//        guard previousIndex >= 0 else{return nil}
-//        guard orderedViewControllers.count > previousIndex else {return nil}
-//        return orderedViewControllers[previousIndex];
-//    }
-//    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-//        print("called")
-//        return orderedViewControllers.count
-//    }
-//    
-//    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
-//        guard let firstViewController = viewControllers?.first,
-//            firstViewControllerIndex = orderedViewControllers.indexOf(firstViewController) else {
-//                return 0
-//        }
-//        
-//        return firstViewControllerIndex
-//    }
-//}
+extension SurveyAppPageViewController: UIPageViewControllerDelegate {
+
+    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if let firstViewController = viewControllers?.first,
+            let index = orderedViewControllers.indexOf(firstViewController) {
+                
+                controlDelegate?.surveyAppPageViewController(self, didUpdatePageIndex: index)
+        }
+    }
+}
+
+protocol SurveyAppPageControlleDelegate: class {
+    
+    func surveyAppPageViewController(surveAppPageViewController: SurveyAppPageViewController,
+        didUpdatePageCount count: Int)
+    
+    func surveyAppPageViewController(surveAppPageViewController: SurveyAppPageViewController,
+        didUpdatePageIndex index: Int)
+}
+
+
+
+

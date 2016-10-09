@@ -14,7 +14,15 @@ class SecondQuestionPageController: UIViewController, UIPickerViewDataSource, UI
     @IBOutlet var questionField: UILabel!
     @IBOutlet var question1: UISlider!
     @IBOutlet var question2: UISlider!
+    
+    
+    @IBAction func nextPage(sender: AnyObject) {
+        parent!.goNextPage("")
+    }
     var pickerData = ["On vacation", "Postcall/worked overnight", "Working days"]
+    var parent: SurveyAppPageViewController?
+    var initQ1Val: Float?;
+    var initQ2Val: Float?;
     //automatically hide the keyboard when touching other part of UI.
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
@@ -26,14 +34,24 @@ class SecondQuestionPageController: UIViewController, UIPickerViewDataSource, UI
     }
     
     override func viewDidLoad() {
-        question1.value = 0
-        question2.value = 0
+        initQ1Val = question1.value
+        initQ2Val = question2.value
+        picker.selectRow(1, inComponent: 0, animated: false)
     }
     
     internal func collectResponse()->[String: String] {
         var response = [String: String]()
-        response["Today I feel"] = String(Int(floor(question1.value * 100)))
-        response["I'm burned out"] = String(Int(floor(question2.value * 100)))
+        if (question1.value != initQ1Val) {
+            response["Today I feel"] = String(Int(floor(question1.value * 100)))
+        }else {
+            response["Today I feel"] = String(150)
+        }
+        
+        if (question2.value != initQ2Val) {
+            response["I'm burned out"] = String(Int(floor(question2.value * 100)))
+        }else {
+            response["I'm burned out"] = String(150)
+        }
         response["I\'m"] = pickerData[picker.selectedRowInComponent(0)]
         return response
     }
@@ -49,4 +67,9 @@ class SecondQuestionPageController: UIViewController, UIPickerViewDataSource, UI
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
     }
+    
+    internal func setParentController(toSet: SurveyAppPageViewController) {
+        parent = toSet
+    }
+    
 }

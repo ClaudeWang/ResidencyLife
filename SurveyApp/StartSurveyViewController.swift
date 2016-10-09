@@ -10,6 +10,7 @@ import UIKit
 
 class StartSurveyViewController: UIViewController {
     @IBAction func nextScreen(sender: AnyObject) {
-        performSegueWithIdentifier("startToQuestions", sender: self)
+        //performSegueWithIdentifier("startToQuestions", sender: self)
+        performSegueWithIdentifier("toQuestions", sender: self)
     }
 }

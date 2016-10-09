@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0B34A8031D753997003CF676 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B34A8021D753997003CF676 /* AppDelegate.swift */; };
-		0B34A8051D753997003CF676 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B34A8041D753997003CF676 /* ViewController.swift */; };
 		0B34A8081D753998003CF676 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B34A8061D753998003CF676 /* Main.storyboard */; };
 		0B34A80A1D753998003CF676 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B34A8091D753998003CF676 /* Assets.xcassets */; };
 		0B34A80D1D753998003CF676 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B34A80B1D753998003CF676 /* LaunchScreen.storyboard */; };
@@ -26,6 +25,7 @@
 		0B9FB11E1D9B6717004C838C /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FB11D1D9B6717004C838C /* InfoViewController.swift */; };
 		0BF6D08D1D83BB3C00C1EC2D /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF6D08C1D83BB3C00C1EC2D /* MicrosoftAzureMobile.framework */; };
 		0BF6D0901D83C10C00C1EC2D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF6D08F1D83C10C00C1EC2D /* WebKit.framework */; };
+		0BFB71171DA5DE180036C368 /* ControlPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFB71161DA5DE180036C368 /* ControlPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,6 @@
 /* Begin PBXFileReference section */
 		0B34A7FF1D753997003CF676 /* ResidencyLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResidencyLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B34A8021D753997003CF676 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0B34A8041D753997003CF676 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0B34A8071D753998003CF676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B34A8091D753998003CF676 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B34A80C1D753998003CF676 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +71,7 @@
 		0BF6D08C1D83BB3C00C1EC2D /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
 		0BF6D08E1D83BBCB00C1EC2D /* SurveyApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SurveyApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		0BF6D08F1D83C10C00C1EC2D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		0BFB71161DA5DE180036C368 /* ControlPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +127,6 @@
 			children = (
 				0B34A8321D753CA2003CF676 /* SurveyAppPageViewController.swift */,
 				0B34A8021D753997003CF676 /* AppDelegate.swift */,
-				0B34A8041D753997003CF676 /* ViewController.swift */,
 				0B34A8061D753998003CF676 /* Main.storyboard */,
 				0B453F3E1D9B5274006C5050 /* moodbar.png */,
 				0B453F3F1D9B5274006C5050 /* colorbar.png */,
@@ -143,6 +142,7 @@
 				0B8EC7B21D79141A00907196 /* ResultPageViewController.swift */,
 				0BF6D08C1D83BB3C00C1EC2D /* MicrosoftAzureMobile.framework */,
 				0BF6D08E1D83BBCB00C1EC2D /* SurveyApp-Bridging-Header.h */,
+				0BFB71161DA5DE180036C368 /* ControlPageViewController.swift */,
 			);
 			path = SurveyApp;
 			sourceTree = "<group>";
@@ -304,10 +304,10 @@
 				0B34A86F1D7547F6003CF676 /* LoginViewController.swift in Sources */,
 				0B8EC7B31D79141A00907196 /* ResultPageViewController.swift in Sources */,
 				0B9FB11E1D9B6717004C838C /* InfoViewController.swift in Sources */,
+				0BFB71171DA5DE180036C368 /* ControlPageViewController.swift in Sources */,
 				0B34A8711D77DB10003CF676 /* FirstQuestionPageController.swift in Sources */,
 				0B34A8731D77DC1C003CF676 /* SecondQuestionPageController.swift in Sources */,
 				0B34A8331D753CA2003CF676 /* SurveyAppPageViewController.swift in Sources */,
-				0B34A8051D753997003CF676 /* ViewController.swift in Sources */,
 				0B34A8031D753997003CF676 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
