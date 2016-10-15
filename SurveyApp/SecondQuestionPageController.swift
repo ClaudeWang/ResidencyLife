@@ -17,9 +17,16 @@ class SecondQuestionPageController: UIViewController, UIPickerViewDataSource, UI
     
     
     @IBAction func nextPage(sender: AnyObject) {
-        parent!.goNextPage("")
+        if (pickerData[picker.selectedRowInComponent(0)] == "Not yet answered") {
+            let alert = UIAlertController(title: "One more thing!", message: "Please tell us more about your status by choosing an option below \"I am\"!", preferredStyle: UIAlertControllerStyle.Alert)
+            let alertAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alert.addAction(alertAction)
+            self.presentViewController(alert, animated: true, completion: nil)
+        } else {
+            parent!.goNextPage("")
+        }
     }
-    var pickerData = ["On vacation", "Postcall/worked overnight", "Working days"]
+    var pickerData = ["Not yet answered", "On vacation", "Postcall/worked overnight", "Working"]
     var parent: SurveyAppPageViewController?
     var initQ1Val: Float?;
     var initQ2Val: Float?;
@@ -36,7 +43,6 @@ class SecondQuestionPageController: UIViewController, UIPickerViewDataSource, UI
     override func viewDidLoad() {
         initQ1Val = question1.value
         initQ2Val = question2.value
-        picker.selectRow(1, inComponent: 0, animated: false)
     }
     
     internal func collectResponse()->[String: String] {

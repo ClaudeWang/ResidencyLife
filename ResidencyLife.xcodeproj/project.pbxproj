@@ -23,6 +23,8 @@
 		0B8EC7B31D79141A00907196 /* ResultPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8EC7B21D79141A00907196 /* ResultPageViewController.swift */; };
 		0B8EC7B51D79186000907196 /* ThirdQuestionPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8EC7B41D79186000907196 /* ThirdQuestionPageController.swift */; };
 		0B9FB11E1D9B6717004C838C /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FB11D1D9B6717004C838C /* InfoViewController.swift */; };
+		0BA8F3941DB1B2570011AF59 /* noyesbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA8F3921DB1B2570011AF59 /* noyesbar.png */; };
+		0BA8F3951DB1B2570011AF59 /* sadhappybar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0BA8F3931DB1B2570011AF59 /* sadhappybar.png */; };
 		0BF6D08D1D83BB3C00C1EC2D /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF6D08C1D83BB3C00C1EC2D /* MicrosoftAzureMobile.framework */; };
 		0BF6D0901D83C10C00C1EC2D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BF6D08F1D83C10C00C1EC2D /* WebKit.framework */; };
 		0BFB71171DA5DE180036C368 /* ControlPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFB71161DA5DE180036C368 /* ControlPageViewController.swift */; };
@@ -68,6 +70,8 @@
 		0B8EC7B21D79141A00907196 /* ResultPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultPageViewController.swift; sourceTree = "<group>"; };
 		0B8EC7B41D79186000907196 /* ThirdQuestionPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdQuestionPageController.swift; sourceTree = "<group>"; };
 		0B9FB11D1D9B6717004C838C /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		0BA8F3921DB1B2570011AF59 /* noyesbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = noyesbar.png; path = resources/noyesbar.png; sourceTree = "<group>"; };
+		0BA8F3931DB1B2570011AF59 /* sadhappybar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sadhappybar.png; path = resources/sadhappybar.png; sourceTree = "<group>"; };
 		0BF6D08C1D83BB3C00C1EC2D /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
 		0BF6D08E1D83BBCB00C1EC2D /* SurveyApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SurveyApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		0BF6D08F1D83C10C00C1EC2D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -134,6 +138,8 @@
 				0B34A8091D753998003CF676 /* Assets.xcassets */,
 				0B34A80B1D753998003CF676 /* LaunchScreen.storyboard */,
 				0B34A80E1D753998003CF676 /* Info.plist */,
+				0BA8F3921DB1B2570011AF59 /* noyesbar.png */,
+				0BA8F3931DB1B2570011AF59 /* sadhappybar.png */,
 				0B34A86E1D7547F6003CF676 /* LoginViewController.swift */,
 				0B9FB11D1D9B6717004C838C /* InfoViewController.swift */,
 				0B34A8701D77DB10003CF676 /* FirstQuestionPageController.swift */,
@@ -270,6 +276,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BA8F3951DB1B2570011AF59 /* sadhappybar.png in Resources */,
+				0BA8F3941DB1B2570011AF59 /* noyesbar.png in Resources */,
 				0B453F411D9B5274006C5050 /* colorbar.png in Resources */,
 				0B34A80D1D753998003CF676 /* LaunchScreen.storyboard in Resources */,
 				0B34A80A1D753998003CF676 /* Assets.xcassets in Resources */,

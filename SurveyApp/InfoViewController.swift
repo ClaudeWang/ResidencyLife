@@ -26,7 +26,7 @@ class InfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     var pickerDataMarital = ["----", "Single", "Married", "In relationship", "Separated", "Divorced", "Widowed"]
     var pickerDataChildren = ["0", "1", "2-3", "3+"]
     var pickerDataHome = ["----", "Own", "Rent"]
-    var pickerDataLoan = ["----", "Paying off loans", "In Deferment"]
+    var pickerDataLoan = ["----", "N/A", "Paying off loans", "In Deferment"]
     var pickerDataSpecialties = ["----", "Emergency Medicine", "Psychiatry"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -181,7 +181,7 @@ class InfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         //The notification is only scheduled when the user uses it for the first time.
         let notification = UILocalNotification()
         notification.alertTitle = "Burnout Survey"
-        notification.alertBody = "It's time for some surveys!"
+        notification.alertBody = "It's time for some surveys 1!"
         notification.alertAction = "open"
         notification.category = "reminderCategory"
         notification.soundName = UILocalNotificationDefaultSoundName
@@ -189,8 +189,8 @@ class InfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         //schedule a notification that pops up every week, with four days a week.
         let scheduleYear = 2016
         let scheduleMonth = 09
-        let fixedHour = 19
-        let fixedMinute = 30
+        let fixedHour = 20
+        let fixedMinute = 00
         let fixedTimeZone = NSTimeZone.defaultTimeZone()
         
         //schedule the notification on Monday
@@ -230,21 +230,21 @@ class InfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         
         let notification2 = UILocalNotification()
         notification2.alertTitle = "Burnout Survey"
-        notification2.alertBody = "It's time for some surveys!"
+        notification2.alertBody = "It's time for some surveys 2!"
         notification2.alertAction = "open"
         notification2.category = "reminderCategory"
         notification2.soundName = UILocalNotificationDefaultSoundName
         
         let notification3 = UILocalNotification()
         notification3.alertTitle = "Burnout Survey"
-        notification3.alertBody = "It's time for some surveys!"
+        notification3.alertBody = "It's time for some surveys 3!"
         notification3.alertAction = "open"
         notification3.category = "reminderCategory"
         notification3.soundName = UILocalNotificationDefaultSoundName
         
         let notification4 = UILocalNotification()
         notification4.alertTitle = "Burnout Survey"
-        notification4.alertBody = "It's time for some surveys!"
+        notification4.alertBody = "It's time for some surveys 4!"
         notification4.alertAction = "open"
         notification4.category = "reminderCategory"
         notification4.soundName = UILocalNotificationDefaultSoundName
@@ -265,5 +265,7 @@ class InfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         notification4.fireDate = NSCalendar(identifier: NSCalendarIdentifierGregorian)!.dateFromComponents(dateComponentsSun)
         notification4.repeatInterval = NSCalendarUnit.WeekOfYear
         UIApplication.sharedApplication().scheduleLocalNotification(notification4)
+        
+        print("scheduled")
     }
 }

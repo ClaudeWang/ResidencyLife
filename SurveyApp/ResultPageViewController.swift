@@ -12,6 +12,9 @@ class ResultPageViewController: UIViewController {
 
     private var parent:SurveyAppPageViewController?
     
+    @IBAction func previousPage(sender: AnyObject) {
+        parent?.goPrevPage("")
+    }
     @IBAction func ReportResponse(sender: AnyObject) {
         parent!.collectResponse();
         let alert = UIAlertController(title: "Finish", message: "Congratulations! You have submitted a response!", preferredStyle: UIAlertControllerStyle.Alert)

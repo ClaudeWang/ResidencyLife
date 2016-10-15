@@ -19,9 +19,6 @@ class FirstQuestionPageController: UIViewController {
     @IBAction func nextPage(sender: AnyObject) {
         parent!.goNextPage("")
     }
-//    @IBAction func previousPage(sender: AnyObject) {
-//        parent!.goPrevPage("")
-//    }
     @IBAction func previousPage(sender: AnyObject) {
         parent!.goPrevPage("")
     }
@@ -60,7 +57,7 @@ class FirstQuestionPageController: UIViewController {
         "I’ve become more callous towards people since I took this job.",
         "I worry that this job is hardening me emotionally.",
         "I don’t really care what happens to some of my patients.",
-        "I can easily carte a relaxed atmosphere with my patients.",
+        "I can easily create a relaxed atmosphere with my patients.",
         "I feel patients blame me for some of their problems."
     ]
     

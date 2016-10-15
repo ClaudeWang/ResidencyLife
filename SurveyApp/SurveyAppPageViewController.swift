@@ -46,7 +46,7 @@ class SurveyAppPageViewController: UIPageViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dataSource = self
+        //self.dataSource = self
         self.delegate = self
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
@@ -110,6 +110,7 @@ class SurveyAppPageViewController: UIPageViewController {
         self.setViewControllers([p!], direction: .Forward, animated: true, completion: nil)
         let viewControllerIndex = orderedViewControllers.indexOf(p!)
         controlDelegate?.surveyAppPageViewController(self, didUpdatePageIndex: viewControllerIndex!)
+        
         //print(viewControllerIndex)
         
     }
