@@ -17,10 +17,11 @@ class ResultPageViewController: UIViewController {
     }
     @IBAction func ReportResponse(sender: AnyObject) {
         parent!.collectResponse();
-        let alert = UIAlertController(title: "Finish", message: "Congratulations! You have submitted a response!", preferredStyle: UIAlertControllerStyle.Alert)
+        
         func OKHandler(actionTarget: UIAlertAction) {
             finishCurrentSurvey()
         }
+        let alert = UIAlertController(title: "Finish", message: "Congratulations! You have submitted a response!", preferredStyle: UIAlertControllerStyle.Alert)
         let alertAction = UIAlertAction(title: "OK", style: .Default, handler: OKHandler)
         alert.addAction(alertAction)
         self.presentViewController(alert, animated: true, completion: nil)

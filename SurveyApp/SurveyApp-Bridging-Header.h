@@ -6,3 +6,4 @@
 //  Copyright © 2016 Ziyun Wang. All rights reserved.
 //
 #import <MicrosoftAzureMobile/MicrosoftAzureMobile.h>
+#import <CommonCrypto/CommonCrypto.h>
